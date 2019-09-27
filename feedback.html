@@ -12,13 +12,13 @@
     <script src="airtable.browser.js"></script>
     <style>
         .content {
-            margin-top : 40px;
+            margin-top : 20px;
         }
         .slidecontainer {
-  width: 100%;
+  width: 40%;
 }
 
-.slider {
+.slider {   
   -webkit-appearance: none;
   width: 100%;
   height: 15px;
@@ -65,6 +65,20 @@
         height: 100%;
     }
     </style>
+      <style>
+         .button {
+         background-color: #1c87c9;
+         border: none;
+         color: white;
+         padding: 20px 24px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 25px;
+         margin: 3px 2px;
+         cursor: pointer;
+         }
+      </style>    
 </head>
 <body>
     <!-- Navbar start  -->
@@ -88,72 +102,73 @@
               </div>
             </div>
           </section>
-    <div class="container">
+
+    <div class="column is-4 is-offset-8 next-button">
+                    <a href="instructions.html" class="button" target="_blank">Instructions</a>&nbsp;&nbsp;&nbsp;
+                    <a href="scale.html" class="button" target="_blank">Scale</a>
+            
+    </div>
+
+    <div class="container">            
+            <div class="field content">
+                    <div class="columns">
+                        <h1 class="title"> Valence :  <span class="tag is-dark is-large" id="valence"></span></h1> 
+                    </div>
+            <div class="columns is-centered ">
+            <img src="Images/valence.png" width="550">
+            </div>    
+            <div class="columns is-centered ">
+                <div class="column is-2">
+                    Unpleasant
+                </div>
+                <div class="column is-2">
+                    Neutral
+                </div>
+                <div class="column is-2">
+                    Pleasant
+                </div>
+            </div>
+            <div class="columns is-centered ">
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="9" value="5" class="slider" step="0.01" id="valenceSlider">
+                    </div>
+            </div>
+                </div>
             <div class="field content">
                 <div class="columns">
                     <h1 class="title"> Arousal :  <span class="tag is-dark is-large" id="arousal"></span> </h1> 
                 </div>
         
-        <div class="columns">
-            <div class="column is-10 is-offset-1">
-            <img src="Images/arousal.png" class="fit-screen" >
-        </div>
-        </div>
-        <div class="columns is-centered ">
+            <div class="columns is-centered ">
+                <img src="Images/arousal.png" width="550">           
+            </div>
+            <div class="columns is-centered ">
             <div class="column is-2">
                 Inactive
             </div>
             <!-- <div class="column is-2 is-off has-text-centeredset-3">
                 Neutral
             </div> -->
-            <div class="column is-2 is-offset-8 has-text-right">
+            <div class="column is-2">
                 Active
             </div>
-        </div>
-        <div class="columns ">
+            </div>
+            <div class="columns is-centered ">
             
                 <div class="slidecontainer">
-                    <input type="range" min="0" max="10" value="5" class="slider" step="0.01" id="arousalSlider">
+                    <input type="range" min="1" max="9" value="5" class="slider" step="0.01" id="arousalSlider">
 
                     <!-- <p>Value: <span id="demo1"></span></p> -->
                 </div>
-        </div>
             </div>
-            <div class="field content">
-                    <div class="columns">
-                        <h1 class="title"> Valence :  <span class="tag is-dark is-large" id="valence"></span></h1> 
-                    </div>
-            <div class="columns">
-            <div class="column is-10 is-offset-1">
-            <img src="Images/valence.png" class="fit-screen" >
-        </div>
-            </div>    
-            <div class="columns is-centered ">
-                <div class="column is-2">
-                    Unpleasant
-                </div>
-                <div class="column is-2 is-offset-3 has-text-centered">
-                    Neutral
-                </div>
-                <div class="column is-2 is-offset-3 has-text-right">
-                    Pleasant
-                </div>
-            </div>
-            <div class="columns ">
-                    <div class="slidecontainer">
-                        <input type="range" min="0" max="10" value="5" class="slider" step="0.01" id="valenceSlider">
-                    </div>
-            </div>
-                </div>
+            </div>                
                 <div class="field content">
                         <div class="columns">
                             <h1 class="title"> Dominance :  <span class="tag is-dark is-large" id="dominance"></span> </h1> 
                         </div>
-                        <div class="columns">
-                                <div class="column is-10 is-offset-1">
-                                <img src="Images/dominance.png" class="fit-screen" >
-                            </div>
-                                </div>  
+                        <div class="columns is-centered ">
+                                <img src="Images/dominance.png" width="550">
+                        </div>                        
                 <div class="columns is-centered ">
                     <div class="column is-2">
                         Submissive
@@ -161,14 +176,14 @@
                     <!-- <div class="column is-2 is-off has-text-centeredset-3">
                         Neutral
                     </div> -->
-                    <div class="column is-2 is-offset-8 has-text-right">
+                    <div class="column is-2">
                         Dominant
                     </div>
                 </div>
-                <div class="columns ">
+                <div class="columns is-centered ">
                     
                         <div class="slidecontainer">
-                            <input type="range" min="0" max="10" value="5" class="slider" step="0.01" id="dominanceSlider">
+                            <input type="range" min="1" max="9" value="5" class="slider" step="0.01" id="dominanceSlider">
         
                             
                         </div>
@@ -183,51 +198,22 @@
                         <div class="column is-2">
                                 <i class="fas fa-thumbs-down fa-flip-horizontal" style="font-size : 50px;"></i>  Least 
                         </div>
-                        <div class="column is-2 is-offset-3 has-text-centered">
+                        <div class="column is-2">
                             Fair
                         </div>
-                        <div class="column is-2 is-offset-3 has-text-right">
+                        <div class="column is-2">
                             Much <i class="fas fa-thumbs-up" style="font-size : 50px;"></i>
                         </div>
                     </div>
-                    <div class="columns ">
+                    <div class="columns is-centered ">
                         
                             <div class="slidecontainer">
-                                <input type="range" min="0" max="5" value="2.5" class="slider" step="0.01" id="likingSlider">
+                                <input type="range" min="1" max="5" value="2.5" class="slider" step="0.01" id="likingSlider">
             
                                 
                             </div>
                     </div>
                         </div>
-                        <div class="field content">
-                                <div class="columns">
-                                    <h1 class="title"> Relevance :  <span class="tag is-dark is-large" id="relevance"></span> </h1> 
-                                </div>
-                                <div class="columns">
-                                        <div class="column is-10 is-offset-1">
-                                        <img src="Images/recalling.png" class="fit-screen" >
-                                    </div>
-                                        </div>  
-                        <div class="columns is-centered ">
-                            <div class="column is-2">
-                                Not related
-                            </div>
-                            <!-- <div class="column is-2 is-off has-text-centeredset-3">
-                                Neutral
-                            </div> -->
-                            <div class="column is-2 is-offset-8 has-text-right">
-                                Completely related
-                            </div>
-                        </div>
-                        <div class="columns ">
-                            
-                                <div class="slidecontainer">
-                                    <input type="range" min="0" max="5" value="2.5" class="slider" step="0.01" id="relevanceSlider">
-                
-                                    
-                                </div>
-                        </div>
-                            </div>
                             <div class="field content">
                                     <div class="columns">
                                         <h1 class="title"> Familiarity :  <span class="tag is-dark is-large" id="familiarity"></span> </h1> 
@@ -237,21 +223,47 @@
                                 <div class="column is-2">
                                     Least
                                 </div>
-                                <div class="column is-2 is-offset-3 has-text-centered">
+                                <div class="column is-2">
                                     Fair
                                 </div>
-                                <div class="column is-2 is-offset-3 has-text-right">
+                                <div class="column is-2">
                                     Much
                                 </div>
                             </div>
-                            <div class="columns ">
+                            <div class="columns is-centered ">
                                 
                                     <div class="slidecontainer">
-                                        <input type="range" min="0" max="5" value="2.5" class="slider" step="0.01" id="familiaritySlider">
+                                        <input type="range" min="1" max="5" value="2.5" class="slider" step="0.01" id="familiaritySlider">
                                     </div>
                             </div>
                                 </div>
+                        <div class="field content">
+                                <div class="columns">
+                                    <h1 class="title"> Relevance :  <span class="tag is-dark is-large" id="relevance"></span> </h1> 
+                                </div>
+                                        <div class="columns is-centered ">
+                                        <img src="Images/recalling.png" width="550">
+                                    </div>
+                        <div class="columns is-centered ">
+                            <div class="column is-2">
+                                Not related
+                            </div>
+                            <!-- <div class="column is-2 is-off has-text-centeredset-3">
+                                Neutral
+                            </div> -->
+                            <div class="column is-2">
+                                Completely related
+                            </div>
+                        </div>
+                        <div class="columns is-centered ">
                             
+                                <div class="slidecontainer">
+                                    <input type="range" min="1" max="5" value="2.5" class="slider" step="0.01" id="relevanceSlider">
+                
+                                    
+                                </div>
+                        </div>
+                            </div>                            
                                 <div class="field content">
                                     <div class="columns">
                                         <h1 class="title">Select one emotion from the list : </h1> 
