@@ -335,6 +335,8 @@
     </div>
 </body>
 <script>
+var timeS = localStorage.getItem("timestamps")
+document.write(timeS)
 var Airtable = require('airtable');
 $("#emotionType").hide();
 // Get a base ID for an instance of art gallery example

@@ -119,6 +119,7 @@ emotionTime=videoFrame.currentTime.toFixed(1)
 timeStamps.push(emotionTime)
 $('.timestamps').append('<span class="tag is-dark">'+emotionTime+'s</span> &nbsp')
 console.log(timeStamps)
+localStorage.setItem("timestamps", timestamps)
 });
 
 $("#my-video").bind("ended", function() {
