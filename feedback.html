@@ -276,7 +276,10 @@
                                 </div>
                         </div>
                             </div>                            
-                            
+                            <script>
+                                var timeS = localStorage.getItem("timestamps")
+                                document.write(timeS)
+                            </script>
                                 <div class="field content">
                                     <div class="columns">
                                         <h5 class="title">Select one emotion from the list : </h5> 
@@ -343,8 +346,6 @@
   }
   </script>
 <script>
-var timeS = localStorage.getItem("timestamps")
-document.write(timeS)
 var Airtable = require('airtable');
 $("#emotionType").hide();
 // Get a base ID for an instance of art gallery example
