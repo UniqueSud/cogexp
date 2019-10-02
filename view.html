@@ -79,6 +79,14 @@
     </div>
     <script src='https://vjs.zencdn.net/7.5.5/video.js'></script>
   </body>
+  <script> 
+  // <!-- Script to check whether the user have completed the quiz -->
+  // get the flag
+  var quizDone = parseInt(localStorage.getItem("quizDone"));
+  if(quizDone == 0){
+  window.location.href = "error.html";
+  }
+  </script>
   <script>
   // Select a random video to display
   var seen  = JSON.parse(localStorage.getItem("seen"));
@@ -119,6 +127,8 @@ emotionTime=videoFrame.currentTime.toFixed(1)
 timeStamps.push(emotionTime)
 $('.timestamps').append('<span class="tag is-dark">'+emotionTime+'s</span> &nbsp')
 console.log(timeStamps)
+//window.localStorage.setItem("timestamps", timestamps)
+localStorage.setItem("timestamps", timestamps)
 });
 
 $("#my-video").bind("ended", function() {

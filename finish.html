@@ -41,5 +41,16 @@
                           
                     </div>
                 </section>
+                 <script> 
+  // <!-- Script to check whether the user have completed the quiz -->
+  // get the flag
+  var quizDone = parseInt(localStorage.getItem("quizDone"));
+  if(quizDone == 0){
+  window.location.href = "error.html";
+  }else{
+    localStorage.setItem("quizDone",0)
+  }
+  </script>
+
 </body>
 </html>

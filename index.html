@@ -74,7 +74,7 @@ $('#submit').click(function(){
     console.log(record.getId());
     localStorage.setItem("recordid", record.getId());
     localStorage.setItem("count",0);
-    localStorage.setItem("sawVideo",0);
+    localStorage.setItem("quizDone",0);
     localStorage.setItem("seen",JSON.stringify(seen));
     window.location.href = "instructions.html";    
     });
