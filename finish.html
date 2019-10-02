@@ -47,9 +47,10 @@
   var quizDone = parseInt(localStorage.getItem("quizDone"));
   if(quizDone == 0){
   window.location.href = "error.html";
-  }else{
-    localStorage.setItem("quizDone",0)
-  }
+  }// }else{
+  //   localStorage.setItem("quizDone",0)
+  // } This will create problem when the user decided to coninue the test. Because they have already done the test and this will lead to showing the error again.
+  
   </script>
 
 </body>
