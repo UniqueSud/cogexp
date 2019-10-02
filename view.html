@@ -128,7 +128,7 @@ timeStamps.push(emotionTime)
 $('.timestamps').append('<span class="tag is-dark">'+emotionTime+'s</span> &nbsp')
 console.log(timeStamps)
 //window.localStorage.setItem("timestamps", timestamps)
-localStorage.setItem("timestamps", timestamps)
+localStorage.setItem("timestamps", timeStamps)
 });
 
 $("#my-video").bind("ended", function() {
