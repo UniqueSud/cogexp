@@ -83,7 +83,7 @@
          }
       </style>    
 </head>
-<body>
+<body onload="myFunction()">    
     <!-- Navbar start  -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
@@ -275,14 +275,19 @@
                                     
                                 </div>
                         </div>
-                            </div>                            
-                            <script>
-                                var timeS = localStorage.getItem("timestamps")
-                                document.write(timeS)
-                            </script>
+                            </div>    
                                 <div class="field content">
                                     <div class="columns">
-                                        <h5 class="title">Select one emotion from the list : </h5> 
+                                    <p id="myP"></p>
+                                    <script>                            
+                                    function myFunction() {
+                                      var timeS = localStorage.getItem("timestamps")
+                                      var first = timeS[0]
+                                      var result = first.fontsize(7)
+                                      document.getElementById("myP").innerHTML = result;
+                                    }
+                                    </script>                                    
+                                        <!--<h5 class="title">Select one emotion from the list : </h5> -->
                                     </div>
                                     <div class="columns">
                                         <div class=" column is-6">
