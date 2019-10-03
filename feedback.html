@@ -278,16 +278,16 @@
                             </div>    
                                 <div class="field content">
                                     <div class="columns">
-                                    <p id="myP"></p>
+                                    <!--<p id="myP"></p>
                                     <script>                            
                                     function myFunction() {
                                       var timeS = localStorage.getItem("timestamps")
                                       var first = 'Select Emotion from list for time = '+timeS[0]
-                                      var result = first.fontsize(7)
+                                      var result = first.fontsize(5)
                                       document.getElementById("myP").innerHTML = result;
                                     }
-                                    </script>                                    
-                                        <!--<h5 class="title">Select one emotion from the list : </h5> -->
+                                    </script> -->
+                                    <h5 class="title">Select one emotion from the list : </h5> 
                                     </div>
                                     <div class="columns">
                                         <div class=" column is-6">
@@ -304,8 +304,7 @@
                                                           </select>
                                                         </div>
                                         </div>
-
-                                            
+       
                                     </div>
                                     <div id="emotionType" class="columns">
                                         <div class="column is-6">
@@ -1289,7 +1288,7 @@ arousal.oninput = function() {
   arousalOutput.innerHTML = this.value;
   arousalValue=this.value;
   if(valenceValue >5 && arousalValue>5){
-        $("#emotions").html('<option>"Happy: Feeling or showing pleasure or contentment" </option><option> "Delighted: Feeling or showing great pleasure"</option><option> "Excited: Very enthusiastic and eager"</option><option>"Aroused: Sexually excited" </option><option> "Triumphant: Feeling or expressing jubilation after a victory or achievement"</option><option>"Amused: Finding something funny or entertaining." </option><option> "Passionate: Arising from intense feelings of sexual love."</option><option>"Joyous: Full of happiness and joy" </option><option>"Lust: Strong sexual desire." </option><option> "Adventorous: Willing to take risks or to try out new methods, ideas, or experiences"</option><option>No Emotion From List </option>')
+        $("#emotions").html('<option>"Happy: Feeling or showing pleasure or contentment" </option><option> "Delighted: Feeling or showing great pleasure"</option><option> "Excited: Very enthusiastic and eager"</option><option>"Aroused: Sexually excited" </option><option> "Triumphant: Feeling or expressing jubilation after a victory or achievement"</option><option>"Amused: Finding something funny or entertaining." </option><option> "Passionate: Arising from intense feelings of sexual love."</option><option>"Joyous: Full of happiness and joy" </option><option>"Lust: Strong sexual desire." </option><option> "Adventorous: Willing to take risks or to try out new methods, ideas, or experiences"</option><option>No Emotion From List </option>')        
     }else if(valenceValue >5 && arousalValue<=5){
         $('#emotions').html('<option>"Pensive: Engaged in, involving, or reflecting deep or serious thought."</option><option>"Love: An intense feeling of deep affection."</option><option>"Pleased: Feeling or showing pleasure and satisfaction, especially at an event or a situation"</option><option>"Contented: Feeling or expressing happiness or satisfaction"</option><option>"Contented: Feeling or expressing happiness or satisfaction"</option><option>"Calm: Not showing or feeling nervousness, anger, or other strong emotions"</option>< option> "Peaceful: Free from disturbance, tranquil."</option><option>"Relaxed: Free from tension and anxiety"</option><option>"Hopeful: Feeling or inspiring optimism about a future event."</option><option>"Compassionate: Feeling or showing sympathy and concern for others."</option><option>No Emotion From List</option>')
     }
